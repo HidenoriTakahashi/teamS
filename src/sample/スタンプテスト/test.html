@@ -1,0 +1,54 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="test.css">
+    <link rel="stylesheet" href="test.css">
+
+</head>
+
+
+<body>
+<img id="gazo" onclick="changeIMG()" src="blank.png" class="" width="300" height="300" border="0" alt="">
+
+<script type="text/javascript">
+
+//画像を配列に格納する
+var img = new Array();
+
+img[0] = new Image();
+img[0].src = "blank.png";
+img[0].name = "";
+img[1] = new Image();
+img[1].src = "肉球2.png";
+img[1].name = "animate fadeIn";
+//img[2] = new Image();
+//img[2].src=  "blank.png";
+//img[2].name = "";
+//img[3] = new Image();
+//img[3].src=  "肉球2.png";
+//img[3].name = "pulse";
+
+//画像番号用のグローバル変数
+var cnt=0;
+
+
+//画像切り替え関数
+function changeIMG(){
+  
+  //画像番号を進める
+  if (cnt == 1)
+  { cnt=0; }
+  else
+  { cnt++; }
+  
+  //画像を切り替える
+  document.getElementById("gazo").src=img[cnt].src;
+  document.getElementById("gazo").className=img[cnt].name;
+  
+}
+
+</script>
+
+</body>
+
+</html>
